@@ -17,7 +17,10 @@ public class Program {
 		//criando uma stream de Strings com nomes;
 		Stream<String> st2 = Stream.of("Maria","Alex","Bob");
 		System.out.println(Arrays.toString(st2.toArray()));
-
+		
+		//criando stream com interações, primeiro elemento é 0 e os seguintes (x + 2);
+		Stream<Integer> st3 = Stream.iterate(0, x -> x + 2); //infinita
+		System.out.println(Arrays.toString(st3.limit(10).toArray()));//st3.limit define quantos elementos serão impressos do vetor Arrays
+		
 	}
-
 }
